@@ -7,7 +7,7 @@ require("dotenv").config();
 
 async function main() {
   try {
-    const PORT = process.env.PORT || 3000; // Asegúrate de usar el puerto desde variables de entorno o un valor por defecto
+    const PORT = process.env.PORT || 3001; // Asegúrate de usar el puerto desde variables de entorno o un valor por defecto
     // await sequelize.sync({ alter: true });
     app.listen(PORT, () => {
       if(PORT === '3000') {

@@ -40,13 +40,14 @@ export const createProduct = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const { name, priority, description } = req.body;
+  const { name, priority, description, images } = req.body;
 
   try {
     const newProduct = await Products.create({
       name: name,
       priority: priority,
       description: description,
+      // images: images ?? [],
     });
     res.json(newProduct);
   } catch (error) {

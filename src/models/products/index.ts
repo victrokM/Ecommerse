@@ -11,10 +11,11 @@ interface productsI {
   name: string;
   priority: number;
   description: string;
+  // images: string[];
 }
 
-@Table({ modelName: "projects" })
-class Project extends Model<productsI> {
+@Table({ modelName: "products" })
+class product extends Model<productsI> {
   @PrimaryKey
   @AutoIncrement
   @Column({ allowNull: false })
@@ -28,6 +29,9 @@ class Project extends Model<productsI> {
 
   @Column({ allowNull: false, defaultValue: "" })
   description!: string;
+
+  // @Column({ allowNull: false, defaultValue: [] })
+  // images!: string[];
 }
 
-export default Project;
+export default product;
