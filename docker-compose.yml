@@ -12,9 +12,9 @@ services:
     restart: always
     healthcheck:
       test: ['CMD', 'postgresql', 'ping']
-  core-ecommerce:
-    container_name: core-ecommerce
-    build:
-      context: .
-    ports:
-      - "3000:3000"
+  # core-ecommerce:
+  #   container_name: core-ecommerce
+  #   build:
+  #     context: .
+  #   ports:
+  #     - "3000:3000"
