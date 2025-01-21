@@ -1,0 +1,33 @@
+# Ignorar archivos y carpetas relacionadas con Node.js
+node_modules
+npm-debug.log
+pnpm-debug.log
+yarn-error.log
+*.log
+
+# Ignorar carpetas de construcción y empaquetado
+dist
+build
+
+# Ignorar configuraciones del entorno
+.env
+.env.local
+.env.*.local
+
+# Ignorar archivos de control de versiones
+.git
+.gitignore
+
+# Ignorar Dockerfiles locales y archivos de configuración
+Dockerfile
+docker-compose*.yml
+
+# Ignorar configuraciones del editor y del sistema operativo
+*.swp
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Ignorar dependencias de pruebas
+coverage
