@@ -87,7 +87,7 @@ export const deleteProduct = async (
   try {
     const { id } = req.params;
 
-    console.log(id);
+    console.log(id, 'xd');
 
     const Product = await Products.destroy({
       where: {

@@ -4,6 +4,7 @@ import {
   Table,
   PrimaryKey,
   AutoIncrement,
+  DataType,
 } from "sequelize-typescript";
 
 interface categoryI {
@@ -14,7 +15,7 @@ interface categoryI {
 }
 
 @Table({ modelName: "categories" })
-class Category extends Model<categoryI> {     
+class Category extends Model<categoryI> {
   @PrimaryKey
   @AutoIncrement
   @Column({ allowNull: false })
@@ -23,11 +24,23 @@ class Category extends Model<categoryI> {
   @Column({ allowNull: false, defaultValue: "" })
   name!: string;
 
-  @Column({ allowNull: false, defaultValue: [] })
+  @Column({
+    type: DataType.ARRAY(DataType.STRING),
+    allowNull: false,
+    defaultValue: [],
+  })
   subCategories!: string;
 
-  @Column({ allowNull: false, defaultValue: [] })
-  products!: string;
+  @Column({
+    /*
+    cuando sea un array se tiene que colocar de esta manera obviamente
+    cambiando su type
+    */
+    type: DataType.ARRAY(DataType.STRING),
+    allowNull: false,
+    defaultValue: [],
+  })
+  products!: string[];
 }
 
 export default Category;

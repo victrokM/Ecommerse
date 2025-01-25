@@ -19,8 +19,8 @@ class ShoppingCart extends Model<shoppingCartI> {
   @Column({ allowNull: false })
   readonly id!: number;
 
-  @Column({ allowNull: false, defaultValue: [] })
-  products!: string[];
+  // @Column({ allowNull: false, defaultValue: [] })
+  // products!: string[];
 }
 
 export default ShoppingCart;

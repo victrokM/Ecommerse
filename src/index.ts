@@ -1,14 +1,14 @@
 import app from "./app";
-// import sequelize from "./database/database";
-// import model from "./models";
+import sequelize from "./database/database";
+import model from "./models";
 require("dotenv").config();
 
-// sequelize.addModels(model);
+sequelize.addModels(model);
 
 async function main() {
   try {
     const PORT = process.env.PORT || 3001; // Asegúrate de usar el puerto desde variables de entorno o un valor por defecto
-    // await sequelize.sync({ alter: true });
+    await sequelize.sync({ alter: true });
     app.listen(PORT, () => {
       if(PORT === '3000') {
         console.log(`Server running on port ${PORT}`);
