@@ -10,10 +10,10 @@ import {
 
 const router: Router = Router();
 
-router.get("/products", getStores );
-router.get("/products/:id", getStore);
-router.post("/products", createStore);
-router.put("/products/:id", updateStore);
-router.delete("/products/:id", deleteStore);
+router.get("/stores", getStores );
+router.get("/store/:id", getStore);
+router.post("/store", createStore);
+router.put("/store/:id", updateStore);
+router.delete("/store/:id", deleteStore);
 
 export default router;
