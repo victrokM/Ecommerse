@@ -1,1 +1,1 @@
-ecommerse
+ecommerce
